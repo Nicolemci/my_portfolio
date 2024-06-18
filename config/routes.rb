@@ -1,8 +1,9 @@
 # config/routes.rb
+
+
 Rails.application.routes.draw do
-  root 'home#index'
-  resources :projects
-  get 'about', to: 'home#about'
-  get 'contact', to: 'home#contact'
-  post 'contact', to: 'home#send_contact'
+  root 'home#index'      # Home page
+  get 'about', to: 'pages#about'   # About page
+  get 'projects', to: 'pages#projects'   # Projects page
+  get 'contact', to: 'pages#contact'   # Contact page
 end
