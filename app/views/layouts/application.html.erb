@@ -1,4 +1,3 @@
-<!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,37 +6,34 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_link_tag 'header', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'header', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lucida+Console&display=swap">
 </head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lucida+Console&display=swap">
-
-
+<body>
   <header class="header">
-  <div class="header__content flex">
-    <div class="header__photo-container flex">
-      <img src="<%= asset_path('myphoto.png') %>" alt="Your Logo" class="header__photo" />
-      <h2 class="header__title">Nicole McInerney</h1>
+    <div class="header__content flex">
+      <div class="header__photo-container flex">
+        <img src="<%= asset_path('myphoto.png') %>" alt="Your Logo" class="header__photo" />
+        <h2 class="header__title">Nicole McInerney</h2>
+      </div>
+      <nav class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <%= link_to 'Home', root_path, class: 'header__link' %>
+          </li>
+          <li class="header__link-wrapper">
+            <%= link_to 'About', about_path, class: 'header__link' %>
+          </li>
+          <li class="header__link-wrapper">
+            <%= link_to 'Projects', projects_path, class: 'header__link' %>
+          </li>
+          <li class="header__link-wrapper">
+            <%= link_to 'Contact', contact_path, class: 'header__link' %>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__main">
-      <ul class="header__links">
-        <li class="header__link-wrapper">
-          <%= link_to 'Home', root_path, class: 'header__link' %>
-        </li>
-        <li class="header__link-wrapper">
-          <a href="#about" class="header__link">About</a>
-        </li>
-        <li class="header__link-wrapper">
-          <%= link_to 'Projects', projects_path, class: 'header__link' %>
-        </li>
-        <li class="header__link-wrapper">
-          <%= link_to 'Contact', contact_path, class: 'header__link' %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
+  </header>
 
   <div class="container">
     <%= yield %>
