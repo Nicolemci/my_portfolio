@@ -8,7 +8,7 @@ body {
 .header {
   position: fixed;
   top: 0;
-  width: 99%;
+  width: 100%;
   z-index: 1000;
   background: #c8cac9;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
@@ -66,8 +66,45 @@ body {
   color: #092746;
 }
 
+.sidebar {
+  position: fixed;
+  top: 70px; /* Adjust based on header height */
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.sidebar__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar__link-wrapper {
+  margin: 10px 0;
+}
+
+.sidebar__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.sidebar__link:hover {
+  color: #092746;
+}
+
 .container {
   padding-top: 90px; /* Adjust this value based on the header height */
+  padding-left: 70px; /* Add padding to accommodate the sidebar */
 }
 
 /* Add additional styles as needed */
