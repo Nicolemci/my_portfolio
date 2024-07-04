@@ -5,16 +5,80 @@ body {
   box-sizing: border-box;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #c8cac9;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  height: 70px;
+  top: 0;
+  left: 0;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__photo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__main {
+  display: flex;
+}
+
+.header__links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__link-wrapper {
+  margin-left: 20px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header__link:hover {
+  color: #092746;
+}
+
 .sidebar {
   position: fixed;
-  top: 70px; /* Adjust based on header height */
+  top: 70px;
   left: 0;
   width: 60px;
-  height: 100%;
+  height: calc(100% - 70px);
   background: #fff;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .sidebar__links {
@@ -27,16 +91,14 @@ body {
 }
 
 .sidebar__link-wrapper {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .sidebar__link {
   text-decoration: none;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Adjust size as needed */
   display: block;
-  transform: rotate(-90deg); /* Rotate the text */
-  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .sidebar__link:hover {
@@ -44,17 +106,15 @@ body {
 }
 
 .container {
-  padding-top: 90px; /* Adjust this value based on the header height */
-  padding-left: 70px; /* Add padding to accommodate the sidebar */
+  padding-top: 90px;
+  padding-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 90px); /* Full height minus the header */
+  height: calc(100vh - 90px);
 }
 
 .content {
-  max-width: 800px; /* Adjust the max width as needed */
+  max-width: 800px;
   text-align: center;
 }
-
-/* Add additional styles as needed */

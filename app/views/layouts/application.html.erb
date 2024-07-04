@@ -8,11 +8,12 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag 'header', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lucida+Console&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header class="header">
-    <div class="header__content flex">
-      <div class="header__photo-container flex">
+    <div class="header__content">
+      <div class="header__photo-container">
         <img src="<%= asset_path('myphoto.png') %>" alt="Your Logo" class="header__photo" />
         <h2 class="header__title">Nicole McInerney</h2>
       </div>
@@ -38,25 +39,37 @@
   <div class="sidebar">
     <ul class="sidebar__links">
       <li class="sidebar__link-wrapper">
-        <a href="https://www.linkedin.com" target="_blank" class="sidebar__link">LinkedIn</a>
+        <a href="https://www.linkedin.com" target="_blank" class="sidebar__link">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </li>
       <li class="sidebar__link-wrapper">
-        <a href="https://www.twitter.com" target="_blank" class="sidebar__link">Twitter</a>
+        <a href="https://www.twitter.com" target="_blank" class="sidebar__link">
+          <i class="fab fa-twitter"></i>
+        </a>
       </li>
       <li class="sidebar__link-wrapper">
-        <a href="https://www.youtube.com" target="_blank" class="sidebar__link">YouTube</a>
+        <a href="https://www.youtube.com" target="_blank" class="sidebar__link">
+          <i class="fab fa-youtube"></i>
+        </a>
       </li>
       <li class="sidebar__link-wrapper">
-        <a href="https://www.github.com" target="_blank" class="sidebar__link">GitHub</a>
+        <a href="https://www.github.com" target="_blank" class="sidebar__link">
+          <i class="fab fa-github"></i>
+        </a>
       </li>
       <li class="sidebar__link-wrapper">
-        <a href="https://www.medium.com" target="_blank" class="sidebar__link">Medium</a>
+        <a href="https://www.medium.com" target="_blank" class="sidebar__link">
+          <i class="fab fa-medium"></i>
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="container">
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>
